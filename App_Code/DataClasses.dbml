@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="student_schedule" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\student_schedule.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="student_scheduleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_register" Member="tbl_registers">
+    <Type Name="tbl_register">
+      <Column Name="stud_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stud_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stud_class" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stud_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stud_password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stud_pic" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="user_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_attend" Member="tbl_attends">
+    <Type Name="tbl_attend">
+      <Column Name="attend_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="attend_curr_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="attend_class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="attend_attendance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_login" Member="tbl_logins">
+    <Type Name="tbl_login">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="log_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="log_password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_schedule" Member="tbl_schedules">
+    <Type Name="tbl_schedule">
+      <Column Name="sch_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sch_day" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sch_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sch_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sch_class" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="sch_class_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sch_subject" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="sch_prof" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
